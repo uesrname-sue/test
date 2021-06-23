@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // function add( number1, number2 ) {
+        //     var result = number1 + number2;
+        //     return result;
+        // }
+
+        // var sum1 =  add(2, 3);
+        // var sum2 = add(1234,890);
+        // var sum3 = add(7898,9876789)
+        // var sum4 = add(3, 4);
+
+        // console.log( sum1,   sum2,   sum3,   sum4)
+        // function add(a1,b2){
+        //     return a1 * b2;
+        // }
+
+        // var sum = add(2,3);
+
+        // console.log(sum);
+        // console.log(  add(2, 4)  );
+        // 1 + 2 = 3;
+
+        // 函数: 做什么的
+
+        // 1. 简化代码
+        // 2. 根据参数 返回值多样化
+        
+
+        // 函数的组成部分
+
+        // 1. 形参 
+        // 2. 实参
+        // 3. 返回值
+
+        // 创建函数
+
+        // 1. function  
+        // 2. 表达式  
+            // var b = function ()　{} 
+            // var result = function add () {}
+            
+
+        // function createDom(element) {
+        //     // 创建一个div
+        //     if( element )
+        //     var oDiv = document.createElement(element);
+        //     return oDiv;
+        // }
+
+
+        // var oDiv1 = document.createElement('div');
+        // var oDiv2 = document.createElement('div');
+        // var oDiv3 = document.createElement('div');
+
+
+        // var oDiv1 = createDom('div');
+        // var oDiv2 = createDom('span');
+        // var oDiv3 = createDom('h1');
+
+        // console.log(oDiv1,oDiv2,oDiv3);
+
+
+
+        //错误：
+        // 1，形参没有留位置
+        // 2，return
+        // 3,a2 is not defind  a2没有定义 未经声明就使用
+        // 4，打印结果出错
+
+
+        //普通函数 
+        // function add(a1,b2){
+        //     return a1 * b2;
+        // }
+
+
+
+
+        //阶乘
+        //n! = n* (n - 1)!
+        //5! = n* (n - 1)!
+        // jc(n) = n * jc(n - 1)
+
+
+
+        // function jc(n){
+
+        //     if(n == 1){
+        //         return 1;
+        //     }
+        //     return n * jc(n-1);
+        // }
+
+        // var mul = jc(5);
+
+        // console.log(mul);
+
+        // mul(5) ==> 5 * jc(4);
+        // mul(4) ==> 4 * jc(3);
+
+
+
+        // function add(a1 , a2 , a3){
+        //     return a1 + a2 + a3;
+        // }
+        // var sum = add(3 , 4, 5);
+
+
+        // sum = 3;
+
+        // console.log(sum);
+            //递归
+            //找规律  n = (n-1) + (n-2)
+            //找出口  如果n=1或n=2 然后就返回：1
+        
+
+        // function fb(n){
+        //     return fb(n - 1) + fb(n - 2);
+
+        //     if(n == 1 || n == 2){
+        //         return 1;
+        //     }
+          
+        // }
+
+
+
+        //普通函数：
+    //     function add(A1,B2){
+    //         return A1 + B2;
+    //     }
+    //    var sum = add(3,5);
+    //    console.log(sum);
+
+        //普通函数二练习：
+    //     function add(a,b){
+    //         return a * b;
+    //     }
+    //    var sum1 = add(8,9);
+    //    var sum2 = add(6878,89);
+    //    var sum3 = add(12,13);
+    //    var sum4 = add(890,99);
+    //    console.log(sum1,sum2,sum3,sum4);
+
+        //普通函数练习三：
+    //     function add(a,b,c,d){
+    //         return a + b - c * d;
+    //     }
+    //    var sum1 = add(1,2,3,5);
+    //    var sum2 = add(5,6,7,8);
+    //     console.log(sum1,sum2);
+
+        //递归：求5的阶乘：
+    //     function add(n){
+    //         if(n == 1){
+    //             return 1;
+    //         }
+     
+    //         return n * add(n - 1);
+    //     }
+    //    var sum =  add(5);
+    //    console.log(sum);
+    
+    //阶乘2练习：
+    //     function add(n){
+    //         if(n == 1){
+    //             return 1;
+    //         }
+    //         return n * add(n - 1);
+    //     }
+    //    var sum = add(10);
+    //    console.log(sum);
+    
+    //阶乘3练习：
+        // function add(n){
+        //     if(n == 1){
+        //         return 1;
+        //     }
+        //     return n * add(n - 1)
+        // }
+        // var sum = add(8);
+        // console.log(sum);
+
+        //递归，斐波那契数列练习1
+    //     function fb(n){
+    //         if(n == 1 || n == 2){
+    //             return 1;
+    //         }
+    //         return fb(n - 1) + fb(n - 2);
+    //     }
+    //    var sum = fb(10);
+    //    console.log(sum);
+
+        //斐波那契数列练习2
+        // function fb(n){
+        //     if(n == 1 || n == 2){
+        //         return 1;
+        //     }
+        //     return fb(n - 1) + fb(n - 2);
+        // }
+        // var sum = fb(20);
+        // console.log(sum);
+
+        //斐波那契数列练习3
+        function fb(n){
+            if(n == 1 || n == 2){
+                return 1;
+            }
+            return fb(n - 1) + fb(n - 2);
+        }
+        var sum = fb(5);
+        console.log(sum);
+
+    
+
+        
+
+
+    </script>
+</body>
+
+</html>

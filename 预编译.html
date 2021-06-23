@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function fn(a) {
+        //     console.log(b);   //unde
+        //     console.log(a);   //function  () {}
+
+        //     var a = 123;
+
+        //     console.log(a);  //123
+
+        //     function a() { }
+
+        //     console.log(a); //123
+
+        //     var b = function () { };
+
+        //     console.log(b);  //function () {};
+
+        // }
+
+        // //
+        // fn(1);
+
+// console.log(bar());
+// function bar (){
+//     foo = 10;
+//     function foo(){
+
+//     }
+//     var foo = 11;
+//     return foo;
+// }
+
+
+        /**
+         *
+         * AO{
+         *      a : unde
+         *      b : unde
+         *
+         * }
+         *
+         * **/
+
+
+        /**
+        *
+        * AO{
+        *      a : 1
+        *      b : unde
+        *
+        * }
+        *
+        * **/
+
+
+        /**
+         *
+         * AO{
+         *      a : function  a() {}    123
+         *      b : unde   function () {};
+         *
+         * }
+         *
+         * **/
+        //递归:
+        //递归的好处就是符合人们的思维方式
+        //递归必须注意两点:1,找规律  2,找出口
+        // 求n的阶乘   
+        //n的阶乘是 n*(n-1)
+        // function mul(n) {
+        //     if( n == 1){
+        //         return 1;
+        //     }
+            //用if是如果n==1时,那么就返回值1
+            // return返回值
+        //     return n * mul( n - 1 );
+        // } 
+        // mul(5);
+        // mul(5) ==> 5 * mul(4);
+        // mul(4) ==> 4 * mul(3);
+
+        //斐波那契数列:
+        //特点:找规律 /找出口
+        //斐波那契数列:fb(n) == fb(n - 1) + (n - 2);
+        // function fb(n){
+        //     //如果n==1时或n==2时,那么return就返回值1
+        //     if(n == 1 || n == 2){
+        //         return 1;
+        //     }
+        //     return fb(n - 1)+(n - 2);
+        // }
+        // fb(5) ==> fb(4) + fb(3)
+        // fb(4) ==> fb(3) + fb(2)
+        // fb(3) ==> fb(2) + fb(1)
+
+
+
+
+        //预编译：
+        //1，函数声明整体提升
+        //函数声明整体提升：如果写一个函数声明不管写在哪里 系统总是会把这个函数提升到逻辑的最前面，
+        //不管在哪调用函数本质上都是一样的。
+        //列1
+        //函数执行不管时在下还是上面都可以执行
+        // add();
+        // function add(){
+        //     console.log('a')
+        // }
+
+        //2，变量 / 声明提升
+        //列1   变量声明；
+        // console.log(a)//把下面的提到最上面来执行了
+        // var a = 123;
+
+       //列2   变量  // 声明；
+        // var a;
+        // a = 123;
+
+
+        //预编译四部曲：
+        //1、创建AO对象：执行期上下文，函数产生的存储库**
+
+        //2、找形参和变量声明，将变量和形参名作为AO属性名，值为：undefined**
+
+        //3、将实参值和形参值统一**
+
+        //4、在函数体里找函数声明，值赋予函数体**。
+        //列：
+        // function fn(a){//1
+        //     console.log(a);//function a () {}
+
+        //     var a = 123;//1
+
+        //     console.log(a);//123
+        
+        //     function a () {}
+
+        //     console.log(a);//123
+
+        //     var b = function () {}//1
+
+        //     console.log(b);// function () {}
+
+        //     function d () {}
+        // }
+        // fn(1);
+
+        //AO{
+            // a;  function a () {}
+            // b;undefined
+            // d;function d () {}
+
+            //列2
+            // function test(a,b){//2
+            //     console.log(a);//1
+            //     c = 0;//2
+            //     var c;//2
+            //     a = 3;//2
+            //     b = 2;//2
+            //     console.log(b);//2
+            //     function b() {}
+            //     function d() {}
+            //     console.log(b);//2
+            // }
+            // test(1);
+        //    AO{
+                // a;3
+                // c;0
+                // b;2
+                // d; function d() {}
+
+        //    }
+        //2、找形参和变量声明，将变量和形参名作为AO属性名，值为：undefined**
+
+        //3、将实参值和形参值统一**
+
+        //4、在函数体里找函数声明，值赋予函数体**。
+        //列3
+        function test(a,b){
+            console.log(a);//function a() {}
+
+            console.log(b);//undefined
+
+            var b = 234;
+
+            console.log(b);//234
+
+            a = 123;
+            console.log(a);//123
+
+            function a() {}
+            var a;
+            b = 234;
+            var b = function () {}
+            console.log(a);//123
+            console.log(b);//function () {}
+        }
+        test(1);
+
+        // AO{
+            a;function a() {}
+            b;undefined
+
+
+        // }
+
+
+
+        
+
+
+    </script>
+</body>
+
+</html>
