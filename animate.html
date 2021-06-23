@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            margin: 0 auto;
+            border: 2px solid black;
+            overflow: hidden;
+
+        }
+        ul {
+            width: 1300px;
+            height: 100%;
+            position: relative;
+
+            animation: aa 8s linear infinite 2s ;
+        }
+        li {
+            list-style: none;
+        }
+        ul li img {
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+        /* 定义动画 @keyframes */
+        @keyframes aa {
+            0% {
+                left: 0px;
+            }
+
+            25% {
+                left: -300px;
+
+            }
+
+            50% {
+                left: -300px;
+            }
+
+            75% {
+                left: -600px;
+            }
+            100% {
+                left: -600px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <ul>
+            <li><img src="./walk.jpg" alt=""></li>
+            <li><img src="./2.jpg" alt=""></li>
+            <li><img src="./3.jpg" alt=""></li>
+            
+        </ul>
+    </div>
+</body>
+
+</html>
